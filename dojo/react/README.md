@@ -1,5 +1,9 @@
 # ReactJS Dojo
 
+### To-Do
+
+- [ ] Add To-do card feature
+- [ ] Update To-Do list as a second feature
 
 ### Challenge
 In this challenge, you are asked to add a few features to an existing TODO application. by the end of this session, we wish to have a TODO application with the following features:
