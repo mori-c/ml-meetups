@@ -1,5 +1,6 @@
 # ReactJS Dojo
 
+
 ### Challenge
 In this challenge, you are asked to add a few features to an existing TODO application. by the end of this session, we wish to have a TODO application with the following features:
 * a login/ sign up screen (already implemented)
