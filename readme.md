@@ -1,5 +1,6 @@
-# Meet-Up Coding Workshop Schedule  <sup> WIP </sup>
-
+# Meet-Up Coding Workshop Schedule 
+ <sup> WIP </sup>
+ 
 <br />
 
 | Meet-Up                  | Date                              | Event Repo                                                                              |
