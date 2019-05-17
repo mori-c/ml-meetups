@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" style="height:100%">
+
+<head>
+    <meta charSet="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Artificial intelligence with Mihok from TorontoJS, building on basic knowledge we will discover and build Neural Networks from scratch to get a better understanding of how they work." />
+    <title>JS Workshop</title>
+    <script type="text/javascript" src="helpers/manifest.lib.js"></script>
+    <script type="text/javascript" src="helpers/math.lib.js"></script>
+    <script type="text/javascript" src="helpers/data.lib.js"></script>
+</head>
+
+<body>
+  <script type="text/javascript" src="helpers/renderers.lib.js"></script>
+  <script type="text/javascript">
+
+// Welcome to TorontoJS Workshop :) 
+
+// const's of class Network
+
+const H1 = 0;
+const H2 = 1;
+const O1 = 2;
+
+const W1 = 0;
+const W2 = 1;
+const W3 = 2;
+const W4 = 3;
+const W5 = 4;
+const W6 = 5;
+
+const I1 = 0;
+const I2 = 1;
+
+// network of 3 neurons with constructor values and 1 output neuron
+
+class Network {
+  
+  biases = []; // = [0 , 0, 0];
+  weights = []; // = [0, 0, 0, 0, 0, 0];
+
+  // lossFn = function (a, p) { throw new Error('not implemented'); };
+
+  hidden = [];
+  output;
+
+  constructor (weights = [], biases = [], activatorFn) {
+    // classes of biases
+
+    this.biases = biases;
+    this.weights = weights;
+
+    this.hidden = [
+      // from const defined above
+      new Neuron(this.weights[W1], this.weights[W2], this.biases[H1]. activatorFn), 
+      new Neuron(this.weights[W3], this.weights[W4], this.biases[H2]. activatorFn),
+    ];
+    
+    this.output = new Neuron(this.weights[W5], this.weights[W6], this.biases[O1]. activatorFn);
+
+  }
+
+
+// input data to train, calc with derivatives into weight, biases
+// warning: biast data!!
+train = (data = [], answers = [], iterations = 1000, rate = 0.1) {
+  //
+  for (let i = 0; i < iterations; i += 1) {
+    // for every iterations 
+    for (let d in data) {
+      // firing signalling
+      let h1Sum = this.hidden[H1].sum(data[d]);
+      // activatorFn
+      let h1 = this.hidden[H1].activatorFn(h1Sum);
+      // for each one
+      let h2Sum = this.hidden[H2].sum(data[d]);
+      let h2 = this.hidden[H2].activatorFn(h2Sum);
+
+      let o1Sum = this.output.sum([h1, h2]);
+      let o1 = this.output.activatorFn(o1Sum);
+    
+      let pred = o1;
+
+      // now calc partial derivative
+      // identify loss of weight to predict output from derivative of sigmond function
+
+      let plpO1 = -2 * (answers[d]) - pred();
+      let lplW6 = h1 * Math.derivSigmoid(o1Sum);
+      let lplW5 = h2 * Math.derivSigmoid(o1Sum);
+      
+      let pO1pB3 = Math.derivSigmoid(o1Sum);
+
+      let pO1pH3 = this.weights[W5] * Math.derivSigmoid(o1Sum);
+      let pO1pH2 = this.weight[W6] * Math.derivSigmoid(o1Sum);
+
+      let pH1pW1= data[d][I1] * Math.derivSigmoid(h1Sum);
+      let pH1pW2 = data[d][I2] * Math.derivSigmoid(h1Sum);
+
+      let pH1pB2 = Math.derivSigmoid(h1Sum);
+
+      let pH2pW3= data[d][I1] * Math.derivSigmoid(h2Sum);
+      let pH2pW4= data[d][I2] * Math.derivSigmoid(h2Sum);
+
+      let pH2pB3= Math.derivSigmoid(h2Sum);
+
+      // derivatives above
+      // weights below
+      // L = loss
+      // H = height
+      // p = prep
+
+      this.weights[W1] -= rate * pLO1 * pO1pH1 * pH1pW1;
+      this.weights[W2] -= rate * pLO1 * pO1pH1 * pH1pW2;
+
+      this.weights[W3] -= rate * pLO1 * pO1pH2 * pH2pW3;
+      this.weights[W4] -= rate * pLO1 * pO1pH2 * pH2pW4;
+      
+      this.weights[W5] -= rate * pLO1 * pO1pH5;
+      this.weights[W6] -= rate * pLO1 * pO1pH6;
+      
+      this.biases[H1] -= rate * pLO1 * pO1pH1 * pH1pB1;
+      this.biases[H2] -= rate * pLO1 * pO1pH2 * pH2pB2;
+      this.biases[O1] -= rate * pLO1 * pO1pB1
+
+      // take each weight value and add into neuron
+
+      this.out.weight = [
+        this.weights[W5].
+        this.weights[W6],
+      ];
+
+      this.output.bias = this.biases[O1];
+
+      this.hidden[H1].weights = [
+        this.weights[H1],
+        this.weights[H2],
+      ];
+
+      this.hidden[H1].bias = this.biases[H1];
+
+      this.hidden[H2].weights = [
+        this.weights[W3],
+        this.weights[W4],
+      ];
+
+      this.hidden[H2].bias = this.biases[H2];
+
+      // workshop session stopped here. 
+      // to continue completing this nn:
+      // https://github.com/mihok/workshop-apr19/blob/checkpoint/999/index.html
+
+      // mean.square.error = loss function
+
+    }
+
+  }
+}
+
+  // takes input, loop is the autoencoder that outputs the final weight of the layer
+  query (inputs = []) {
+    let params = [];
+
+    for (let h in this.hidden) {
+      params.push(this.hidden[h].fire(inputs));
+    }
+    return this.output.fire(params);
+  }
+}
+
+class Neuron {
+  bias; 
+  weights;
+  activatorFn;
+
+  constructor (weights = [], bias = 0, activatorFn) {
+    this.bias = bias;
+    this.weights = weights;
+    this.activatorFn = activatorFn;
+  }
+
+  sum (inputs = []) {
+    // multple 1st input with 1st weight
+
+    let buffer = [];
+    let output = 0;
+
+    for (let i in inputs) {
+      buffer[i] = inputs[i] * this.weights[i];
+    }
+
+    for (let b in buffer) {
+      output += buffer[b];
+    }
+
+    output = this.bias;
+
+    return output;
+
+  }
+
+  // fired inputs, get multipled by their weights, and activated by the bias
+
+  fire (inputs = []) {
+    let output = 0;
+
+    output = this.sum(inputs);
+
+    let results = this.activatorFn(output);
+
+    return results;
+  }
+
+}
+
+// single neuron with one input
+
+// weights
+// n.fire(x) => const w = [];
+const w = [0, 1, 0, 1, 0, 1];
+
+
+
+// bias
+// n.fire(x) => const b = [];
+const b = [0, 0, 0];
+
+// neuron = activatorFn
+// n.fire(x) => const nn = new Neuron(w, b, Math.sigmoid);
+const nn = new Neuron(w, b, Math.sigmoid);
+
+// activatorFn = should neuron fire? based on location, weights, sigmond (a wave fn of 0,1)
+// Math.sigmoid
+// sigmond fn = math.js = out of 0 or 1
+
+
+// input
+// n.fire(x) => const x = [2];
+const x = [2, 3];
+
+
+// console.log('Run neuron against input', n.fire(x));
+console.log('Run neuron against input', nn.query(x));
+
+// feed inputs with outputs
+
+
+  </script>
+</body>
+
+</html>
