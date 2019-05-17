@@ -12,7 +12,9 @@ understanding of the fundemental building blocks of neural networks.
 
 ### Materials & Resources
 
-* Repo : [torontoJS](https://github.com/mori-c/meetups/tree/master/torontojs)
+* Repo : [torontoJS](https://github.com/mori-c/meetups/tree/master/torontojs/neural-network-js)
+Lost code : [](meetups/torontojs/2019/april/neural-network-js/src/mori-c-neural-network-js-master.zips)
+
 * Project Board : [Workshop Code](https://github.com/mori-c/meetups/projects/11) 
 
 * [Workshop](https://www.meetup.com/torontojs/events/bqlmqpyzfbqb/) 
