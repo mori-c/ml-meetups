@@ -1,0 +1,3 @@
+[submodule "gdg/gdg-firebase"]
+	path = gdg/gdg-firebase
+	url = git@github.com:gdg-toronto/firebase-study-jam-season-1.git
