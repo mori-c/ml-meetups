@@ -15,23 +15,25 @@ Classification feature ideas:
 
 ## Breakdown
 
-| Process           | I / O | Method / Tools |
-| ----------------- | ----- | -------------- |
-| store/upload data | input | firestone      | clean eeg data | input | colab, numpy, pandas | graph, visualize data | output | colab, matplotlib | identify frequency channels | - | - | remove interfernce noise | input | firestone, csv | apply deep learning algorithms (FFT) | input | colab, algebra | display output of either image or wavelengths (tbd) | output | - | identify loss perhaps around less active channels by boosting (reinforce activity with auditory engagement, for example) | - | colab, generalization, loss, monte carlo / bayesian / regression |
-
+| Process                                                                                                                  | I / O  | Method / Tools                                                   |
+| ------------------------------------------------------------------------------------------------------------------------ | ------ | ---------------------------------------------------------------- |
+| store/upload data                                                                                                        | input  | firestone                                                        |
+| clean eeg data                                                                                                           | input  | colab, numpy, pandas                                             |
+| graph, visualize data                                                                                                    | output | colab, matplotlib                                                |
+| identify frequency channels                                                                                              | -      | -                                                                |
+| remove interfernce noise                                                                                                 | input  | firestone, csv                                                   |
+| apply deep learning algorithms (FFT)                                                                                     | input  | colab, algebra                                                   |
+| display output of either image or wavelengths (tbd)                                                                      | output | -                                                                |
+| identify loss perhaps around less active channels by boosting (reinforce activity with auditory engagement, for example) | -      | colab, generalization, loss, monte carlo / bayesian / regression |
 
 
 ## Firestone (database) → Firebase Setup
 
 [Firestore Sub-Collections](https://howtofirebase.com/firestore-sub-collections-2e23c998540d)
 
-
 ## Framework
 
 [Django](https://www.hackanons.com/2018/03/python-django-with-google-firebase.html)
-
-
-
 
 ---
 
