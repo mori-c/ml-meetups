@@ -1,3 +1,39 @@
+# Goals
+
+1. Individual app idea to follow along the series
+2. Set up Firebase with Firestore
+3. Choice of Framework (Angular, Vue, React)
+
+
+## Idea
+
+Create EEG Biosignal classifier with PyTorch/Tensorflow connected with Firebase
+
+Classification feature ideas:
+
+...
+
+## Breakdown
+
+| Process           | I / O | Method / Tools |
+| ----------------- | ----- | -------------- |
+| store/upload data | input | firestone      | clean eeg data | input | colab, numpy, pandas | graph, visualize data | output | colab, matplotlib | identify frequency channels | - | - | remove interfernce noise | input | firestone, csv | apply deep learning algorithms (FFT) | input | colab, algebra | display output of either image or wavelengths (tbd) | output | - | identify loss perhaps around less active channels by boosting (reinforce activity with auditory engagement, for example) | - | colab, generalization, loss, monte carlo / bayesian / regression |
+
+
+
+## Firestone (database) → Firebase Setup
+
+[Firestore Sub-Collections](https://howtofirebase.com/firestore-sub-collections-2e23c998540d)
+
+
+## Framework
+
+[Django](https://www.hackanons.com/2018/03/python-django-with-google-firebase.html)
+
+
+
+
+---
 
 ## [Firebase Study Jam Series - Session 2](https://www.meetup.com/GDG-Toronto/events/261549807/)
 
@@ -38,3 +74,11 @@ Below is a quick glance of the schedule:
 Look forward to see everyone!
 
 GDG Toronto
+
+---
+
+## Resources
+
+[Angular](https://angular.io/)
+[Firebase Documentation](https://firebase.google.com/docs/guides/)
+[Tensorflow](https://www.tensorflow.org/tutorials/)
