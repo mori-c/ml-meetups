@@ -1,0 +1,10 @@
+firebase structure w: json
+
+nested directory path query with Firestore
+
+user, id
+request/user/#
+
+
+
+1. design your database
