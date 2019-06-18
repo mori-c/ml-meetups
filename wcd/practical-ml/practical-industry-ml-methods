@@ -1,0 +1,288 @@
+
+
+
+to get data ready before 
+
+
+
+
+data scientist (DS) 
+- code, linear algebra, statistics
+- statistician
+- storytelling
+- get a small dataset or on kaggle, build a ml model
+- miragtion from old to new HR systems - data's not clean; missing values, use python to clean, analysize the data and present the data
+
+
+
+data
+- application, scpring, collect data from an api, labelling data
+
+infra/platform
+- mv away from data warehousing
+- rdbms, hadoop, cloud
+
+data eng
+- etl, enrichment, dataflow autom
+- docker, building data pipelines, feature engineering and 
+- write good sql queries
+
+
+ai/ml
+- python, ml
+- creating ml models
+- only spend 20-30% creating ml models
+- 
+
+deployment
+- build customer models at risk to create predictions == create a prediction API
+- weekly, or monthly predictions models that creates a score of a likihood == batch processing
+- real-time decision making based on real-time data collection to assist on decision making 
+- improving insurance models
+
+
+operational DS
+- for marketing campagias to target and identify who they are and what they do, to retain customers (calling vs email, promo vs large discounts)
+- business decision making on scores, understand business rules 
+- good at sql for data wrangling on predictive models from training
+- credit scoring models
+- simplier the model, the better
+- good to become a product mgr rather than a senior software developer
+- this will be the data analysit in the future without needing to code aka autoML (drag n drop platforms)
+
+
+ML researcher
+- big tech or start ups
+- product is 
+- need to come from academia to create IP 
+- need to code
+
+
+ML engineering
+- train models 
+- prediction API
+- automate pipelines
+- help data science teaam to deployment
+- start-ups and banks
+- software engineers
+
+DS product mgrs
+- high demand
+- linkedin's product mgrs know ml well
+- not only how it works, and know how to integrate 
+- mba programs have started to teach python to build models
+- amazon, sagemaker helps build models
+
+
+not how to train a ml model that is special
+iot will provide lots of data
+banks use ibm mainframe and a lot of things are hard coded
+difficult to automate data cleaning/wrangling
+
+
+
+customer values
+- growth period
+- maturity from service subscription longetivity, loyality, 
+- when poyality is at risk
+
+
+ML use case models
+
+01
+
+200 customer records
+
+| id | event date | calling from | calling to |
+| -- | ---------- | ------------ | ---------- |
+| 01 | 2019-05-05 | Customer A   | Customer B |
+
+
+feature engneering:
+
+sass, py, apache spark
+large into small table
+cx id 1
+new labels: churns = 0/1 = time ( multple phone calls + today date + cancel )
+
+# feature types from comparing A & B of innovative indicators 
+learn from historical data
+learn from cx behaviour
+dropped call
+competitive pricing and sensitivity
+monitor social contacts (as a strong indicator)
+2000-10k features in columns
+
+
+csv rows
+group patterns together
+
+
+columns (timeline)
+combine cols together to map a slope of increase (1) or descrease (0) 
+once a prediction is averaged, correalate what's top 5 (think of strava scoreboards)
+- bahaviour of user, metrics of demographics
+
+
+
+data (structure,vs unstructure)
+data pipeline
+- demographics
+- location data for personalisation, cluster of main areas and activities that might happen
+-- raptors game, scotia area, go train, 3 hours, ticketmaster data (final game)
+-- work or home location (m-f and time can indentify which location)
+- urls visited - finance?
+- parse(url), classify, sythesize, point of interest(POI) location prediction (location analytics), location
+
+data product
+
+
+^ ML workflow
+------------------------------
+
+regression
+- high width
+- numerical feature variables & correalation
+-
+
+classification
+- color cluster
+- binary labelling
+
+clustering / grouping
+- usually two groups with labelling
+- unsupervised learning
+- figure out
+
+
+| ml            | continous             | categorical               |
+| 
+| supervised    | regression            | (binary) classification   |
+| unsupervised  | dimension reduction   | clustering                |
+
+
+
+sas 
+- expensive, corp, healthcare
+- data mgmt, analytics
+- competes with py, r
+
+spark / hadoop / h2o
+- big data problems, features in billions
+- py can't handle training 
+- must customize spark as it's not as feature rich as sci-kit learn
+
+
+azure ml = 
+- docker container
+- vm 
+- matlib
+- r
+- google's auto ml
+- sagemaker
+
+
+deep learning
+- tensorflow
+- keras
+- microsoft cntk 
+
+
+ML Lifecycle
+![](https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2F3gp10c1vpy442j63me73gy3s-wpengine.netdna-ssl.com%2Fwp-content%2Fuploads%2F2018%2F03%2FScreen-Shot-2018-03-22-at-10.41.30-AM.png&f=1_)
+
+def objective(customer_churns)
+
+model data > variable selection
+- dimension redux, the train the model
+- business care about the accuracy
+
+interpret model
+- 400-200 milisecond real-time is the standard best right now
+
+data acquirsition
+- imagenet
+-- proper labelled data
+
+
+exploratory data analysis problems
+- regression model may not work
+
+- box plot
+-- spike outliners: regression with a lot of effort (parametric model)
+-- 
+
+missing data 
+- regression will ingore the row with the values
+
+spliting data
+holdout event - larger data
+cross validation - smaller data
+
+
+feature preprocessing
+- creating new feature (combine cols into a new col)
+
+
+if data is prepared
+
+
+
+
+
+
+
+decision tree splitting = divide and conquer algm = traverse
+- 1st feat [f1, f2] = left(feat(split())), right(feat) > 
+- combine_last_nodes(new_unpure_feat) < leafs < branches < node
+
+
+real estate spliting into subsets
+- elevation
+- sq ft
+- price
+
+distrubtion = maximal tree
+
+city()
+if A, then B
+reutrn 
+
+
+decision tree
+- splitting rules
+- traversing back to parent feature (prediction)
+- probability
+- tree structure
+
+apply holdout dataset and decision tree 
+if less than 100%, is its new confidence = overfitting
+
+overfitting = stright line
+curve U = 
+
+
+y = error rate
+blue = model performance
+
+parameter tuning
+d1, d2, dn = deeper the tree depth = parameters tunable = where overfitting happens
+left = shallow depth = high error = underfitting = biast
+right = deep depth = better confidence = new data points = overfitting = invariaous
+
+
+model evaluation
+svn
+
+
+model interpreation
+
+parametric = regression model = y = beta vectors(scale of features)
+decision tree = non-linear classification model intrepreation = not powerful
+esemble trees = which variable plays an important role
+
+lime = explain decision in a local area = customer at risk = build any algm = which variable is most important to the customer = faster than shad
+
+
+model automation
+- to create score
