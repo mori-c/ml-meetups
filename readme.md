@@ -6,6 +6,7 @@
 | Meet-Up                  | Date                              | Event Repo                                                                             |
 | ------------------------ | --------------------------------- | -------------------------------------------------------------------------------------- |
 | gdg                      | [05-27-19](https://is.gd/hzUR7P)  | [Firebase NoSQL](https://github.com/mori-c/meetup/tree/master/gdg)                     |
+| wcd <!-- weclouddata --> | [05-06-19](https://is.gd/BhEkFa)  | [Apache Spark](https://github.com/mori-c/meetups/tree/master/wcd/spark)                |
 | wcd <!-- weclouddata --> | [05-06-19](https://is.gd/d8jKCT)  | [Data Wrangle & Plot w: Py](https://github.com/mori-c/meetups/tree/master/wcd)         |
 | dojo                     | [04-30-19](https://is.gd/ejhvWj)  | [ReactJS](https://github.com/mori-c/meetup/tree/master/dojo/react)                     |
 | lighthouse               | [04-30-19](https://is.gd/XsTLk8 ) | [Kubernetes](https://github.com/mori-c/meetup/tree/master/lighthouse/kubernetes)       |
