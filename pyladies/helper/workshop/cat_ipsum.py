@@ -32,7 +32,7 @@ browser.find_element_by_name('Generate').click()
 wait = WebDriverWait(browser, 10) # wait up to 10 seconds before throwing a TimeoutException
 # for title, copy selector from inspector: #selectable > div
 # if site has dropdown menu to do a filter search, use XPATH to grab item path
-# to get XPATH, go to browser, find item, right click, copy to XPATH
+# to get XPATH, go to browser, find item, right click, copy to XPATH (absolute path: /user/user/to/some/path/where/file/is)
 title = wait.until(ec.visibility_of_element_located((By.XPATH, '//*[@id="selectable"]/div')))
 print(title.text)
 

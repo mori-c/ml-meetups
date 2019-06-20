@@ -5,6 +5,7 @@ import headlines2
 import pusheen_gif2
 import cat_ipsum2
 
+# all variables = headlines2.main()
 headings, links, topic = headlines2.main()
 # changed main function in pusheen script to accept parameter
 # passing argument value here for fun
