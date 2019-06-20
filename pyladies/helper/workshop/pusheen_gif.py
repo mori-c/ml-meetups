@@ -16,7 +16,12 @@ def getPusheen(pageNum, x):
     response = opener.open(url)
     # html text downloaded > BeautifulSoup object
     soup = BeautifulSoup(response, 'html.parser')
-    print(soup) # use to check output and compare to browser inspector
+
+    # print(soup) 
+   
+    print(image)   # feedback check to see url
+
+    # use to check output and compare to browser inspector
     # find html elements in our download (can select CSS, find_all regex, find string)
     #image = soup.find('a', attrs={'class':'rl-gallery-link'}).img['src']
     # copy network object denoted by URL to a local file
