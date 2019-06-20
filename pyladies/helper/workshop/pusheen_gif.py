@@ -31,6 +31,11 @@ def getPusheen(pageNum, x):
 
 pages = [] 
 
+# note that this will change with the following:
+# def numGifs(num): ...
+# def main(val): ...
+# emphasis on the main(object)
+
 def numGifs(num):
      # get requested quantity of unique page numbers
     my_list = list(range(1,28))

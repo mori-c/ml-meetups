@@ -55,7 +55,7 @@ m3 = "<h1>"+breed.upper()+"'s words of wisdom:</h1><div class='meow'>"+insight+"
 
 # create HTML file
 f = open('stuff/dashboard.html','w')
-# write to file
+# write to file = f
 f.write(m1+m2+m3)
 f.close()
 print("Done!")
