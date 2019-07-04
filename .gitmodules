@@ -1,3 +1,6 @@
 [submodule "gdg/gdg-firebase"]
 	path = gdg/gdg-firebase
 	url = git@github.com:gdg-toronto/firebase-study-jam-season-1.git
+[submodule "ds-to"]
+	path = ds-to
+	url = git@github.com:DunderData/Data-Science-Tutorials.git
