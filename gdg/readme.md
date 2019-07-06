@@ -1,3 +1,11 @@
+# Update:
+
+6th July 2019
+- Tried RVSP'ing for 4 separate event, but deemed impossible to register for each posting due to meetup notification indicating event is full before registration can even begin or to that effect
+- Did not continue with project with group
+- Submodule [gdg-firebase @ 311a79a](https://github.com/gdg-toronto/firebase-study-jam-season-1/tree/311a79a38e45977a5f3296afb6cbd9f431743194) to be archived
+
+
 # Goals
 
 1. Individual app idea to follow along the series
