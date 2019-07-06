@@ -1,8 +1,13 @@
 # Meetup
 
-Thursday, July 4, 2019
+## Calendar
 
-# [Build a complete machine learning pipeline in scikit-learn](https://www.meetup.com/Data-Science-Toronto/events/262643266/)
+- 07/04/2019  [Build a complete machine learning pipeline in scikit-learn](#01)
+
+---
+
+<a name="01">Thursday, July 4, 2019</a>
+### [Build a complete machine learning pipeline in scikit-learn](https://www.meetup.com/Data-Science-Toronto/events/262643266/)
 
 This final pipeline will provide a robust and effective way to complete all the steps of a machine learning workflow in just a single line of code. Scikit-learn has many new tools to help streamline and automate this process.
 
